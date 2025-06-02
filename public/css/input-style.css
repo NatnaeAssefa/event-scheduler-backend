@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  flex-direction: column;
+}
+.form-group {
+  position: relative;
+  margin-top: 0.5rem;
+}
+input {
+  border: 0.2px solid rgba(0, 0, 0, 0.493);
+  padding: 10px;
+  border-radius: 2px;
+  width: 250px;
+  font-size: 15px;
+}
+.form-group label {
+  position: absolute;
+  top: -0.4rem;
+  left: 1rem;
+  background: white;
+  padding: 0 0.5px;
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: #2b2b2bb0;
+}
+button {
+  width: 150px;
+  font-size: 17px;
+  font-weight: lighter;
+  height: 40px;
+  background-color: #94692d;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.error-message {
+  color: rgba(255, 72, 0, 0.842);
+  margin-top: 10px;
+  font-size: 9px;
+}
+.toggleVisibility {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.displayNone {
+  display: none;
+}
+.displayBlock {
+  display: block;
+}
+.h1Tag {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.pTag {
+  font-size: 10px;
+  font-weight: 200;
+}
+
+.alert.alert-danger {
+  padding: 15px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #e74c3c;
+  font-weight: bold;
+  font-size: 10px;
+  max-width: 250px;
+  margin-top: 20px;
+  text-align: center;
+}
+.alert.alert-danger a {
+  color: #ffcccb;
+  text-decoration: underline;
+}
+.alert.alert-danger a:hover {
+  color: white;
+}
