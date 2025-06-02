@@ -11,10 +11,9 @@ import http, { Server } from "http";
 import bodyParser from "body-parser";
 // @ts-ignore
 import helmet from "helmet";
-import compression from "compression";
 import cookieParser from "cookie-parser"
 
-import { env, access_rules } from "./config";
+import { env } from "./config";
 
 env.ROOT_DIR = rootDir;
 
@@ -41,7 +40,7 @@ app.use((req, res, next) => {
 
 app.use(cookieParser());
 
-app.use(compression());
+// app.use(compression());
 app.use(express.json({ limit: "100mb" }));
 app.use(bodyParser.json({ limit: "100mb" }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
