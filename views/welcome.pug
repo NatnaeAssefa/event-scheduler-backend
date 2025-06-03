@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Welcome
+        style.
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                text-align: center;
+                background-color: #ffffff;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                color: #4CAF50;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            p {
+                color: #666666;
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                color: #ffffff;
+                background-color: #007bff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            .btn:hover {
+                background-color: #0056b3;
+            }
+    body
+        .container
+            h1 Welcome!
+            p Hello #{name}, welcome to our service. We're glad to have you here.
+            a.btn(href=homeUrl) Go to Homepage

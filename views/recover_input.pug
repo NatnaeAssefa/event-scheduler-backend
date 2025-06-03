@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(
+      href="/public/css/bootstrap.min.css",
+      rel="stylesheet"
+    )
+    link(
+      href="/public/css/font-awesome.all.min.css",
+      rel="stylesheet"
+    )
+    link(
+      href="/public/css/input-style.css",
+      rel="stylesheet"
+    )
+    title Reset Password
+  body
+    form#passwordRecoveryForm(action="/auth/recover-input", method="POST")
+      h1.h1Tag Reset Your Password
+      p.pTag Create a new password to regain access to your account.
+
+      // Hidden fields for email and code
+      input(type="hidden", name="email", value=email)
+      input(type="hidden", name="code", value=code)
+
+      .form-group
+        input#newPassword(type="password", name="password", placeholder="New Password")
+        label(for="newPassword") New Password
+        i#toggleNewPassword.fa.fa-eye.toggleVisibility(aria-hidden="true")
+
+      .form-group
+        input#confirmPassword(type="password", name="confirm_password", placeholder="Confirm Password")
+        label(for="confirmPassword") Confirm Password
+        i#toggleConfirmPassword.fa.fa-eye.toggleVisibility(aria-hidden="true")
+
+      if messages
+            each message in messages
+              .alert.alert-danger.error.displayBlock#errorAlert=message.message || 'Unknown Error'
+      .error-message#errorMessage.displayNone Passwords do not match!
+
+      button(type="submit") Submit
+    script(src="/public/js/script.js")
+      
